@@ -1,0 +1,63 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <title>form page</title>
+</head>
+
+<body>
+
+    <div id="title">
+        
+        <h1  id="titletext">Product list</h1>
+        <input form="my-form" type="submit" value="save" id="save-product-bnt" >
+      
+        </input>
+        <a href="../index.html" id="cancel-product-bnt" >
+               Cancel
+        </a>
+    </div>
+    <!--Item scroll-->
+    <div class="scroll">
+       
+
+      
+        <div id="form">
+                
+                <form action="PHP/login.php" id="product_form" method="POST">
+                <label>SKU:</label>
+                <input name="SKU" autocomplete="off" type="text">
+        
+                <label>Name:</label>
+                <input  name="Name" autocomplete="off" type="text"><br>
+
+                <label>Price:</label>
+                <input  name="Price" autocomplete="off" type="text"><br>
+
+                <label>Type:</label><br>
+                <select name="productTypes" id="productTypes"></select>
+                <option value="DVD" id="DVD">DVD</option>
+                <option value="Furniture" id="Furniture">Furniture</option>
+                <option value="Book" id="Book">Book</option>
+                </select>
+        
+               
+               </form>
+        </div>
+        
+
+    </div>
+    <div id="footer">
+        <h5 id="footertext">Scandiweb test-Gabriel Valadão Santos</h5>
+    </div>
+
+    
+    <script src="../JAVASCRIPT/controle.js"></script>
+</body>
