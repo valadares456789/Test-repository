@@ -18,7 +18,7 @@
 
     <div id="title">
         
-        <h1  id="titletext">Product list</h1>
+        <h1  id="titletext">New product</h1>
         <input form="my-form" type="submit" value="save" id="save-product-bnt" >
       
         </input>
@@ -36,24 +36,25 @@
                    <!-- General info -->    
 
                 <form action="PHP/login.php" id="product_form" method="POST">
-                <label>SKU:</label>
-                <input name="SKU" id="SKU" autocomplete="off" type="text">
+                <label>SKU:</label><br>
+                <input name="SKU" id="SKU" autocomplete="off" type="text"><br>
         
-                <label>Name:</label>
-                <input  name="Name" id="Name" autocomplete="off" type="text">
+                <label>Name:</label><br>
+                <input  name="Name" id="Name" autocomplete="off" type="text"><br>
 
-                <label>Price:</label>
-                <input  name="Price" id="Price" autocomplete="off" type="text">
+                <label>Price:</label><br>
+                <input  name="Price" id="Price" autocomplete="off" type="text"><br>
 
                 <!-- product type dropdown list -->
 
                 <label>Type:</label><br>
 
                 <select name="productTypes" id="productTypes" class="options" onchange="showHideInput(this)">
-
-                <option value="0" id="DVD" class="options">DVD</option>
-                <option value="1" id="Furniture" class="options">Furniture</option>
-                <option value="2" id="Book" class="options">Book</option>
+                
+                <option value="0" id="none" class="options">none</option>
+                <option value="1" id="DVD" class="options">DVD</option>
+                <option value="2" id="Furniture" class="options">Furniture</option>
+                <option value="3" id="Book" class="options">Book</option>
                 
                 </select>
 
@@ -61,7 +62,7 @@
 
                 <div id="typeforms">
                     <div id="dvd" style="display:none">
-                        <label>Size(MB):</label>
+                        <label>Size(MB):</label><br>
                         <input  name="Size" id="Size" autocomplete="off" type="text">
                     </div>
                     <div id="furniture" style="display:none">

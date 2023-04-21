@@ -61,3 +61,12 @@ font-family:"garet"
 label{
     font-weight: bold;
 }
+
+#form{
+    margin-top:60px;
+    margin-left:-60px;
+}
+
+#typeforms{
+    margin-top:30px;    
+}
