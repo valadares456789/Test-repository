@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/form.css">
+    <script src="../JAVASCRIPT/form_dynamics.js"></script>
     <title>form page</title>
 </head>
 
@@ -30,24 +32,52 @@
 
       
         <div id="form">
-                
+
+                   <!-- General info -->    
+
                 <form action="PHP/login.php" id="product_form" method="POST">
                 <label>SKU:</label>
-                <input name="SKU" autocomplete="off" type="text">
+                <input name="SKU" id="SKU" autocomplete="off" type="text">
         
                 <label>Name:</label>
-                <input  name="Name" autocomplete="off" type="text"><br>
+                <input  name="Name" id="Name" autocomplete="off" type="text">
 
                 <label>Price:</label>
-                <input  name="Price" autocomplete="off" type="text"><br>
+                <input  name="Price" id="Price" autocomplete="off" type="text">
+
+                <!-- product type dropdown list -->
 
                 <label>Type:</label><br>
-                <select name="productTypes" id="productTypes"></select>
-                <option value="DVD" id="DVD">DVD</option>
-                <option value="Furniture" id="Furniture">Furniture</option>
-                <option value="Book" id="Book">Book</option>
+
+                <select name="productTypes" id="productTypes" class="options" onchange="showHideInput(this)">
+
+                <option value="0" id="DVD" class="options">DVD</option>
+                <option value="1" id="Furniture" class="options">Furniture</option>
+                <option value="2" id="Book" class="options">Book</option>
+                
                 </select>
-        
+
+                <!-- Individual type forms -->
+
+                <div id="typeforms">
+                    <div id="dvd" style="display:none">
+                        <label>Size(MB):</label>
+                        <input  name="Size" id="Size" autocomplete="off" type="text">
+                    </div>
+                    <div id="furniture" style="display:none">
+                        <label>Height(CM):</label>
+                        <input  name="Height" id="Height" autocomplete="off" type="text">
+                        <label>width(CM):</label>
+                        <input  name="width" id="width" autocomplete="off" type="text">
+                        <label>Lenth(CM):</label>
+                        <input  name="width" id="width" autocomplete="off" type="text">
+                    </div>
+                    <div id="book" style="display:none">
+                        <label>Weight(KG):</label>
+                        <input  name="Weight" id="Weight" autocomplete="off" type="text">
+                    </div>
+                </div>
+                
                
                </form>
         </div>
