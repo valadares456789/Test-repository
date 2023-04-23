@@ -43,7 +43,7 @@
                 <input  name="Name" id="Name" autocomplete="off" type="text"><br>
 
                 <label>Price:</label><br>
-                <input  name="Price" id="Price" autocomplete="off" type="text"><br>
+                <input  name="Price" id="Price" autocomplete="off" type="text"  placeholder="$"><br>
 
                 <!-- product type dropdown list -->
 
@@ -61,21 +61,32 @@
                 <!-- Individual type forms -->
 
                 <div id="typeforms">
-                    <div id="dvd" style="display:none">
+
+                    <div id="dvd" style="display:none" class="types">
+
                         <label>Size(MB):</label><br>
-                        <input  name="Size" id="Size" autocomplete="off" type="text">
+                        <input  name="Size" id="Size" autocomplete="off" type="text"><br>
+                        <label class="helpinfo">Data within the DVDs will not be read</label>
+
                     </div>
-                    <div id="furniture" style="display:none">
+
+                    <div id="furniture" style="display:none" class="types">
+
                         <label>Height(CM):</label>
                         <input  name="Height" id="Height" autocomplete="off" type="text">
                         <label>width(CM):</label>
                         <input  name="width" id="width" autocomplete="off" type="text">
                         <label>Lenth(CM):</label>
-                        <input  name="width" id="width" autocomplete="off" type="text">
+                        <input  name="Lenth" id="Lenth" autocomplete="off" type="text"><br>
+                        <label class="helpinfo">Please provide the info in centimeters only</label>
+
                     </div>
-                    <div id="book" style="display:none">
+
+                    <div id="book" style="display:none" class="types">
+
                         <label>Weight(KG):</label>
-                        <input  name="Weight" id="Weight" autocomplete="off" type="text">
+                        <input  name="Weight" id="Weight" autocomplete="off" type="text"><br>
+                        <label class="helpinfo">Only metric measurements will be accepted</label>
                     </div>
                 </div>
                 
