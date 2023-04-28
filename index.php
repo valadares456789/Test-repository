@@ -11,7 +11,7 @@ require_once('CLASSES/querylist_class.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="CSS/index.css?<?php echo time(); ?>">
     <title>index page</title>
 </head>
 
@@ -23,19 +23,20 @@ require_once('CLASSES/querylist_class.php');
         <a href="HTML/form.html" id="add-product-bnt" >
                 add
         </a>
-        <a href="" id="delete-product-bnt" >
-               Delete itens
-        </a>
+        <input form="list_form" type="submit" value="delete" id="save-product-bnt" >
+        </input>
     </div>
     <!--Item scroll-->
-    <div class="scroll">
+     <div  class="scroll"> 
+    <form action="CLASSES/delete_query.php" id="list_form" method="POST" class="scroll">
         <?php
             $list = new querylist_class();
-            echo $list->prod_query();
+             $list->prod_query();
         ?>
-    </div>
+        </form>
+     </div> 
         <div id="footer">
-                <h5 id="footertext">Scandiweb test-Gabriel Valadão Santos</h5>
+                <div id="footertext">Scandiweb test-Gabriel Valadão Santos</div>
         </div>
 
     <script src="../JAVASCRIPT/controle.js"></script>

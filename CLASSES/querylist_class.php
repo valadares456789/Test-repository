@@ -9,8 +9,8 @@ class querylist_class extends Con_class
         $stament = $this -> concexecution()->query($sqlquery);
         while ($row = $stament-> fetch())
         {
-            return '<a class="itens" href="pedido.php">
-                <input type="checkbox" name="delete-checkbox1" value="delete1" class="delete-checkbox">
+            echo '<div class="itens" >
+                <input type="checkbox" name="delete-checkbox[]" value="'.$row['prod_ID'].'" class="delete-checkbox">
                 <div class="sectionone">
                     
                     <u class="pen">' .$row['prod_SDK']. '</u>
@@ -21,8 +21,9 @@ class querylist_class extends Con_class
                     <u class="pen">' .$row['prod_WIDTH'].  '</u>
                     <u class="pen">' .$row['prod_LENGTH'].  '</u>
                     <u class="pen">' .$row['prod_SIZE'].  '</u>
+
                 </div>
-            </a>';
+            </div>';
            
         }
 
