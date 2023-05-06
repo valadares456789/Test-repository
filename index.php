@@ -20,7 +20,7 @@ require_once('CLASSES/querylist_class.php');
     <div id="title">
         
         <h1  id="titletext">Product list</h1>
-        <a href="HTML/form.html" id="add-product-bnt" >
+        <a href="HTML/form.php" id="add-product-bnt" >
                 add
         </a>
         <input form="list_form" type="submit" value="delete" id="save-product-bnt" >
@@ -38,6 +38,4 @@ require_once('CLASSES/querylist_class.php');
         <div id="footer">
                 <div id="footertext">Scandiweb test-Gabriel Valadão Santos</div>
         </div>
-
-    <script src="../JAVASCRIPT/controle.js"></script>
 </body>

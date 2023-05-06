@@ -11,7 +11,7 @@ class Con_class
     private $host = "localhost";
     private $user = "root";
     private $password = "";
-    private $database_name = "producstest";
+    private $database_name = "products";
 
 
     // database connection execution

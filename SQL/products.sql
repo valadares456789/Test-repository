@@ -24,18 +24,16 @@ CREATE TABLE IF NOT EXISTS `products` (
   `prod_ID` int(11) NOT NULL AUTO_INCREMENT,
   `prod_SDK` int(11) NOT NULL,
   `prod_NAME` varchar(255) NOT NULL,
-  `prod_PRICE` int(11) NOT NULL,
-  `prod_SIZE` int(11) DEFAULT NULL,
-  `prod_HEIGHT` int(11) DEFAULT NULL,
-  `prod_WIDTH` int(11) DEFAULT NULL,
-  `prod_LENGTH` int(11) DEFAULT NULL,
-  `prod_WEIGHT` int(11) DEFAULT NULL,
+  `prod_PRICE` varchar(255) NOT NULL DEFAULT '',
+  `prod_SIZE` varchar(255) DEFAULT '',
+  `prod_HEIGHT` varchar(255) DEFAULT '',
+  `prod_WIDTH` varchar(255) DEFAULT '',
+  `prod_LENGTH` varchar(255) DEFAULT '',
+  `prod_WEIGHT` varchar(255) DEFAULT '',
   PRIMARY KEY (`prod_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela producstest.products: ~1 rows (aproximadamente)
-INSERT INTO `products` (`prod_ID`, `prod_SDK`, `prod_NAME`, `prod_PRICE`, `prod_SIZE`, `prod_HEIGHT`, `prod_WIDTH`, `prod_LENGTH`, `prod_WEIGHT`) VALUES
-	(1, 11, 'fulano', 100, NULL, NULL, NULL, NULL, 45);
+
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
