@@ -1,5 +1,7 @@
 <?php
 
+namespace CLASSES\conn;
+
 
 
 class Con_class

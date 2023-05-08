@@ -1,7 +1,8 @@
 <?php
-if(isset($_POST['delete-checkbox[]']))
+if(isset($_POST['delete-checkbox']))
 {
     require_once('Con_class.php');
+    
     class querydelete_class extends Con_class
     {
         public function delete_query($IDs)

@@ -18,13 +18,16 @@ require_once('CLASSES/querylist_class.php');
 <body>
 
     <div id="title">
-        
-        <h1  id="titletext">Product list</h1>
-        <a href="HTML/form.php" id="add-product-bnt" >
+        <div id="title2">
+        <h1  id="titletext">New product</h1>
+        </div>
+        <a href="FORM/form.php" id="add-product-bnt" >
                 add
         </a>
-        <input form="list_form" type="submit" value="delete" id="save-product-bnt" >
-        </input>
+        <button form="list_form" type="submit"  id="delete-product-bnt" >
+            delete
+        </button>
+       
     </div>
     <!--Item scroll-->
      <div  class="scroll"> 

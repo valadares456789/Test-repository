@@ -22,7 +22,7 @@ USE `producstest`;
 -- Copiando estrutura para tabela producstest.products
 CREATE TABLE IF NOT EXISTS `products` (
   `prod_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `prod_SDK` int(11) NOT NULL,
+  `prod_SDK` int(11) NOT NULL UNIQUE,
   `prod_NAME` varchar(255) NOT NULL,
   `prod_PRICE` varchar(255) NOT NULL DEFAULT '',
   `prod_SIZE` varchar(255) DEFAULT '',
@@ -30,8 +30,9 @@ CREATE TABLE IF NOT EXISTS `products` (
   `prod_WIDTH` varchar(255) DEFAULT '',
   `prod_LENGTH` varchar(255) DEFAULT '',
   `prod_WEIGHT` varchar(255) DEFAULT '',
+  `prod_TYPE` varchar(255) DEFAULT '',
   PRIMARY KEY (`prod_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+); ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
 

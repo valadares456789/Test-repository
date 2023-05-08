@@ -13,18 +13,19 @@ include('..\CLASSES\insert_form_class.php')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../CSS/index.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="../CSS/form.css">
-    <script src="../JAVASCRIPT/form_dynamics.js"></script>
+   
     <title>form page</title>
 </head>
 
 <body>
 
     <div id="title">
-        
+        <div id="title2">
         <h1  id="titletext">New product</h1>
-        <input form="product_form" type="submit" value="save" name="submit" id="save-product-bnt" >
-      
-        </input>
+        </div>
+        <button form="product_form" type="submit" value="save" name="submit" id="save-product-bnt" >
+            save
+        </button>
         <a href="../index.php" id="cancel-product-bnt" >
                Cancel
         </a>
@@ -40,13 +41,14 @@ include('..\CLASSES\insert_form_class.php')
 
                 <form action="form.php" id="product_form" method="POST">
                 <label>SKU:</label><br>
-                <input name="SKU" id="SKU" autocomplete="off" type="text"  required><br>
-        
+                <input name="SKU" id="SKU" class="placeholder" autocomplete="off" type="text" onclick="SDKerror()" required><br>
+                <span class="error" id="error1" aria-live="polite"></span><br>
                 <label>Name:</label><br>
-                <input  name="Name" id="Name" autocomplete="off" type="text"  required><br>
-
+                <input  name="Name" id="Name" autocomplete="off" type="text"  onclick="Namerror()" required><br>
+                <span class="error" id="error2" aria-live="polite"></span><br>
                 <label>Price:</label><br>
-                <input  name="Price" id="Price" autocomplete="off" type="text"  placeholder="$"  required><br>
+                <input  name="Price" id="Price" autocomplete="off" type="text"  placeholder="$"  onclick="pricerror()" required><br>
+                <span class="error" id="error3" aria-live="polite"></span><br>
 
                 <!-- product type dropdown list -->
 
@@ -56,8 +58,8 @@ include('..\CLASSES\insert_form_class.php')
                 
                 <option value="0" id="none" class="options">none</option>
                 <option value="1" id="DVD" class="options">DVD</option>
-                <option value="2" id="Furniture" class="options">Furniture</option>
-                <option value="3" id="Book" class="options">Book</option>
+                <option value="2" id="Book" class="options">Book</option>
+                <option value="3" id="Furniture" class="options">Furniture</option>
                 
                 </select>
 
@@ -65,30 +67,30 @@ include('..\CLASSES\insert_form_class.php')
 
                 <div id="typeforms">
 
-                     <div id="dvd" style="display:none"  class="types">
-
+                     <div id="dvd" style="display:none"  class="types" >
                         <label>Size(MB):</label><br>
-                        <input  name="Size" id="Size"  value="" autocomplete="off" type="number" ><br>
+                        <input  name="Size" id="Size"  onclick="DVDerror()" value="" autocomplete="off" ><br>
+                        <span class="error" id="error4" aria-live="polite"></span><br>
                         <label class="helpinfo">Data within the DVDs will not be read</label>
 
                     </div> 
 
                     <div id="furniture" style="display:none" class="types">
-
                         <label>Height(CM):</label>
-                        <input  name="Height" id="Height"  value="" autocomplete="off" type="number" >
+                        <input  name="Height" id="Height"  onclick="furniturerror()" value="" autocomplete="off" >
                         <label>width(CM):</label>
-                        <input  name="width" id="width" value="" autocomplete="off" type="number" >
+                        <input  name="width" id="width" value="" autocomplete="off"  >
                         <label>Lenth(CM):</label>
-                        <input  name="Lenth" id="Lenth"  value="" autocomplete="off" type="number" ><br>
+                        <input  name="Lenth" id="Lenth"  value="" autocomplete="off" ><br>
+                        <span class="error" id="error5" aria-live="polite"></span><br>
                         <label class="helpinfo">Please provide the info in centimeters only</label>
 
                     </div>
 
                     <div id="book" style="display:none" class="types">
-
                         <label>Weight(KG):</label>
-                        <input  name="Weight" id="Weight"  value="" autocomplete="off" type="number" ><br>
+                        <input  name="Weight" id="Weight" onclick="bookerror()" value="" autocomplete="off"  ><br>
+                        <span class="error" id="error6" aria-live="polite"></span><br>
                         <label class="helpinfo">Only metric measurements will be accepted</label>
                     </div>
                 </div>
@@ -104,5 +106,5 @@ include('..\CLASSES\insert_form_class.php')
     </div>
 
     
-
+    <script src="../JAVASCRIPT/form_dynamics.js"></script>
 </body>

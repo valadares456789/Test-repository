@@ -1,9 +1,11 @@
 /* Geral */
 
-  @font-face {
+  @font-face 
+  {
     font-family: garet;
     src: url(../fonts/garet.book.ttf);
   }
+
 
 
 
@@ -35,9 +37,10 @@ a.link{
 
    
 
-    font-size: 15x;
+    font-size: 15px;
     align-items: baseline;
     position: fixed;
+    height: 100px;
     top: 0;
     left:0;
     background-color:#D3D3D3;
@@ -51,6 +54,18 @@ a.link{
     display: inline-block;
 margin-left:2%;
 }
+#title2{
+    display: inline;
+margin-left:2%;
+}
+
+@media (max-width: 1026px) 
+{
+  #title2 {
+      display: none;
+  }
+}
+
 
 #footer {
     text-align:center;
@@ -153,12 +168,13 @@ margin-left:2%;
     text-align: center;
     text-decoration: none;
     width: 190px;
-    height: 25px;
+    height: 30px;
     background-color: white;
     border: 2px solid #000000; 
      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25); 
     border-radius: 7px;
     margin-left:50%;
+    padding-top:10px;
     
     transition: all .2s ease-in-out;
 }
@@ -169,7 +185,7 @@ margin-left:2%;
 
 
 
-#save-product-bnt{
+#delete-product-bnt{
     cursor: pointer;
     display: inline-block;
     color: black;
@@ -184,12 +200,12 @@ margin-left:2%;
     border: 2px solid #000000; 
      box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25); 
     border-radius: 7px;
-    margin-left:50%;
     padding-top:10px;
+    margin-left:2%;
     transition: all .2s ease-in-out;
 }
 
-#save-product-bnt:hover{
+#delete-product-bnt:hover{
     transform: scale(1.05);
 }
 
